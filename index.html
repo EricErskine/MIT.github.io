@@ -1,5 +1,29 @@
-<html>
-	<body id='canvas'>
-		<h1>Hello World. This is my Github website!</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Campus Dog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dogs at the MIT Campus</h1>
+    <img src="https://wp.technologyreview.com/wp-content/uploads/2022/01/MA22_MIT_seen.jpg" alt="Dogs on MIT Campus" style="width: 300px;">
+    <p id="date-time"></p>
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var dateTime = now.toLocaleString();
+            document.getElementById('date-time').innerHTML = 'Current date and time: ' + dateTime;
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000); // Update the time every second
+    </script>
+</body>
 </html>
+
